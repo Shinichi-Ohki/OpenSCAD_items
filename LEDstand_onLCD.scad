@@ -23,7 +23,7 @@ THE SOFTWARE.
 */
 
 
-linear_extrude(height = 130) {
+linear_extrude(height = 30) {
   translate([0,0,0]) {
     square([1,31],center = false);
   }
