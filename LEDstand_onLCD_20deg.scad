@@ -30,11 +30,11 @@ linear_extrude(height = 30) {
   
   translate([-6.5,0,0]) {
     rotate([0,0,-20]) {
-      translate([-24,19,0]) {
-        translate([24,0,0]) {
+      translate([-26,19,0]) {
+        translate([26,0,0]) {
           square([1,11],center = false);
         }
-        square([25,1],center = false);
+        square([27,1],center = false);
         square([1,11],center = false);
       }
         translate([-17,11,0]) {
@@ -48,7 +48,7 @@ linear_extrude(height = 30) {
       translate([24,0,0]) {
         square([1,11],center = false);
       }
-      square([25,1],center = false);
+      #square([25,1],center = false);
       square([1,11],center = false);
     }
   }
