@@ -14,5 +14,10 @@ My OpenSCAD items.
 - ![](LEDstand_onLCD.jpg)
 - ![](LEDstand_onLCD_cad.png)
 
+## LEDstand on LCD 20deg
+- 上記の物の、LED照明を手前に20°傾けたもの
+- ![](LEDstand_onLCD_20deg_cad.png)
+
+
 ## License
 All items are MIT License.
