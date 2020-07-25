@@ -22,47 +22,45 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
+LED_Width = 25+1;
+Display_Width = 17;
 
 linear_extrude(height = 30) {
+
+  translate([1,19,0]) {
+    rotate([0,0,-20]) {
+      translate([-(LED_Width+2),0,0]) {
+        translate([LED_Width+1,0,0]) {
+          square([1,11],center = false);
+        }
+        square([LED_Width+2,1],center = false);
+        square([1,11],center = false);
+      }
+    }
+  }
+  
   translate([0,0,0]) {
     square([1,19],center = false);
   }
   
-  translate([-6.5,0,0]) {
-    rotate([0,0,-20]) {
-      translate([-26,19,0]) {
-        translate([26,0,0]) {
-          square([1,11],center = false);
-        }
-        square([27,1],center = false);
-        square([1,11],center = false);
+  hull() {
+    translate([1,19,0]) {
+      translate([-19,0,0]) {
+        square([19,0.01],center = false);
       }
-        translate([-17,11,0]) {
-          square([17,8],center = false);
+      rotate([0,0,-20]) {
+        translate([-17,0,0]) {
+          square([17,0.01],center = false);
+        }
       }
     }
   }
 
-  *rotate([0,0,0]) {
-    translate([-24,19,0]) {
-      translate([24,0,0]) {
-        square([1,11],center = false);
-      }
-      #square([25,1],center = false);
-      square([1,11],center = false);
-    }
+  translate([-(Display_Width),10,0]) {
+    square([Display_Width,9],center = false);
   }
   
-  
-  translate([-17,10,0]) {
-    square([17,9],center = false);
-  }
-    
-  translate([-26,19,0]) {
-    *square([1,11],center = false);
-  }
-  
-  translate([-18,10,0]) {
+  translate([-(Display_Width+1),10,0]) {
     square([1,9],center = false);
   }
   
