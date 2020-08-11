@@ -18,6 +18,11 @@ My OpenSCAD items.
 - 上記の物の、LED照明を手前に20°傾けたもの
 - ![](LEDstand_onLCD_20deg_cad.png)
 
+## cheero Power Plus 3 base
+- [cheero Power Plus 3 13400mAh](https://cheero.net/powerplus3/)、[cheero Power Plus 3 10050mAh](https://cheero.net/powerplus3_10050/)を立たせるための土台
+- ![](cheero_PowerPlus3_base.png)
+- ![](cheero_PowerPlus3_base.jpg)
+
 
 ## License
 All items are MIT License.
