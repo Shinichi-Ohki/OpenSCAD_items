@@ -22,7 +22,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-module hanen() {
+
+wall_height = 20;
+
+module half_circle() {
   difference() {
     cylinder(h = 2, r=20);
     cylinder(h = 2, r=15);
@@ -33,12 +36,12 @@ module hanen() {
 }
 
 translate ([0, 11.5, 0]) {
-  hanen();
+  half_circle();
 }
 
 translate ([0, -11.5, 0]) {
   rotate([0,0,180]) {
-    hanen();
+    half_circle();
   }
 }
 
@@ -51,9 +54,9 @@ translate ([0, 0, 1]) {
 }
 
 translate ([-20, -13.5, 0]) {
-  cube(size = [40,2,10], center = false);
+  cube(size = [40,2,wall_height], center = false);
 }
 translate ([-20, 11.5, 0]) {
-  cube(size = [40,2,10], center = false);
+  cube(size = [40,2,wall_height], center = false);
 }
 
