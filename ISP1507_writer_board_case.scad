@@ -37,8 +37,8 @@ module X_wall(x,y,z) {
   translate([x,y,z]) {
     difference() {
       cube([board_w+T*2,T,H]);
-      translate([(board_w+T*2)/2-(board_w+T*2)/4,-0.002,T]) {
-        scale([1,1.004,1.001]) cube([(board_w+4)/2,T,H-T]);
+      translate([(board_w+T*2)/2-(board_w)/4,-0.002,T]) {
+        scale([1,1.004,1.001]) cube([(board_w)/2,T,H-T]);
       }
     }
   }
@@ -49,7 +49,7 @@ module Y_wall(x,y,z) {
   translate([x,y,z]) {
     difference() {
       cube([T,board_h+T*2,H]);
-      translate([-0.002,(board_h+T*2)/2-(board_h+T*2)/4,T]) {
+      translate([-0.002,(board_h+T*2)/2-(board_h)/4,T]) {
         scale([1.004,1,1.001]) cube([T,board_h/2,H-T]);
       }
     }
