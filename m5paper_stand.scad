@@ -22,43 +22,32 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
+module M5Paper() {
+    cube([118,66,10.5],center=false);
+}
 
-wall_height = 20;
+module cutter() {
+    cube([42,30,10]);
+}
 
-module half_circle() {
-  difference() {
-    cylinder(h = 2, r=20);
-    translate([0, 0, -0.001]) {
-      cylinder(h = 2.002, r=15);
+module stand() {
+    cube([40,30,10]);
+}
+
+module body() {
+    difference() {
+        stand();
+        translate([-1,12,1]){
+            rotate([70,0,0]) {
+                M5Paper();
+            }
+        }
+        translate([-1,12,13]){
+            rotate([-35,0,0]) {
+                cutter();
+            }
+        }
     }
-    translate([-20, -20, -0.001]) {
-      cube(size = [40,20,2.002], center = false);
-    }
-  }
 }
 
-translate ([0, 11.5, 0]) {
-  half_circle();
-}
-
-translate ([0, -11.5, 0]) {
-  rotate([0,0,180]) {
-    half_circle();
-  }
-}
-
-translate ([0, 0, 1]) {
-  cube(size = [10,60,2], center = true);
-  difference() {
-    cube(size = [40,23,2], center = true);
-    cube(size = [30,18,2.002], center = true);
-  }
-}
-
-translate ([-20, -13.5, 0]) {
-  cube(size = [40,2,wall_height], center = false);
-}
-translate ([-20, 11.5, 0]) {
-  cube(size = [40,2,wall_height], center = false);
-}
-
+body();
