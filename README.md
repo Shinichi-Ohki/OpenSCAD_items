@@ -23,6 +23,12 @@ My OpenSCAD items.
 - ![](cheero_PowerPlus3_base.png)
 - ![](cheero_PowerPlus3_base.jpg)
 
+## M5Paper Stand
+- [M5Paper(http://ssci.to/6749)のスタンド
+- 幅50mm、奥行き30mm、高さ10mm
+- ![](m5paper_stand.png)
+- ![](m5paper_stand1.jpg)![](m5paper_stand2.jpg)
+
 
 ## License
 All items are MIT License.
