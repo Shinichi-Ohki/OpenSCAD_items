@@ -23,11 +23,11 @@ THE SOFTWARE.
 */
 
 maleBaseWidth = 33;
-maleBaseThick = 6.7;
+maleBaseThick = 6;
 maleMiddleWidth = 26;
-maleMiddleThick = 5;
+maleMiddleThick = 3;
 maleTopWidth = 33;
-maleTopThick = 5;
+maleTopThick = 3;
 
 $fn = 63;
 
@@ -59,7 +59,7 @@ module  tokki() {
 
 femaleBaseWidth = 40;
 femaleBaseLength = 50;
-femaleBaseThick = maleBaseThick+maleMiddleThick+2;
+femaleBaseThick = maleBaseThick+maleMiddleThick+2.7;
 
 module HeadFemale() {
     difference() {
@@ -69,7 +69,7 @@ module HeadFemale() {
         }
         // 中の空間
         translate([(femaleBaseWidth-(maleBaseWidth+2))/2,5,3]){
-            cube([maleBaseWidth+2,femaleBaseLength,maleBaseThick+0.5]);
+            cube([maleBaseWidth+2,femaleBaseLength,maleBaseThick+1.2]);
         }
         // 上の空間
         translate([(femaleBaseWidth-(maleMiddleWidth+1))/2,5,10-1]){
@@ -82,12 +82,12 @@ module HeadFemale() {
     translate([maleBaseWidth+1,femaleBaseWidth-2+10,-3.8]) {
         tokki();
     }
-    translate([3+3,femaleBaseWidth-2+10,femaleBaseThick+3.3]) {
+    translate([3+3,femaleBaseWidth-2+10,femaleBaseThick+5.3]) {
         rotate([0,180,0]) {
             tokki();
         }
     }
-    translate([maleBaseWidth+1+3,femaleBaseWidth-2+10,femaleBaseThick+3.3]) {
+    translate([maleBaseWidth+1+3,femaleBaseWidth-2+10,femaleBaseThick+5.3]) {
         rotate([0,180,0]) {
             tokki();
         }
@@ -95,8 +95,8 @@ module HeadFemale() {
 }
 
 module Adaptor() {
-    translate([(femaleBaseWidth-maleBaseWidth)/2,(femaleBaseLength+maleBaseWidth)/2,2.9]){
-        rotate([180,0,0]) {
+    translate([(femaleBaseWidth-maleBaseWidth)/2,(femaleBaseLength-maleBaseWidth)/2,-(maleBaseThick+maleMiddleThick)]){
+        rotate([0,0,0]) {
             HeadMale();
         }
     }
