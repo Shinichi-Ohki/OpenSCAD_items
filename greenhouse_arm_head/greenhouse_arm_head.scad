@@ -31,17 +31,17 @@ maleTopThick = 3;
 
 $fn = 63;
 
-module HeadMale() {
+module HeadMale(BaseWidth=maleBaseWidth,BaseThick=maleBaseThick,MiddleWidth=maleMiddleWidth,MiddleThick=maleMiddleThick,TopWidth=maleTopWidth,TopThick=maleTopThick) {
     translate([0,0,0]){
-        cube([maleBaseWidth,maleBaseWidth,maleBaseThick]);
+        cube([BaseWidth,BaseWidth,BaseThick]);
     }
 
-    translate([(maleBaseWidth-maleMiddleWidth)/2,(maleBaseWidth-maleMiddleWidth)/2,maleBaseThick]){
-        cube([maleMiddleWidth,maleMiddleWidth,maleMiddleThick]);
+    translate([(BaseWidth-MiddleWidth)/2,(BaseWidth-MiddleWidth)/2,BaseThick]){
+        cube([MiddleWidth,MiddleWidth,MiddleThick]);
     }
 
-    translate([0,0,maleBaseThick+maleMiddleThick]){
-        cube([maleTopWidth,maleTopWidth,maleTopThick]);
+    translate([0,0,BaseThick+MiddleThick]){
+        cube([TopWidth,TopWidth,TopThick]);
     }
 }
 
@@ -55,54 +55,4 @@ module  tokki() {
             cube([3.2, 20, 15]);
         }
     }
-}
-
-femaleBaseWidth = 40;
-femaleBaseLength = 50;
-femaleBaseThick = maleBaseThick+maleMiddleThick+2.7;
-
-module HeadFemale() {
-    difference() {
-        // 全体
-        translate([0,0,0]){
-            cube([femaleBaseWidth,femaleBaseLength,femaleBaseThick]);
-        }
-        // 中の空間
-        translate([(femaleBaseWidth-(maleBaseWidth+2))/2,5,3]){
-            cube([maleBaseWidth+2,femaleBaseLength,maleBaseThick+1.2]);
-        }
-        // 上の空間
-        translate([(femaleBaseWidth-(maleMiddleWidth+1))/2,5,10-1]){
-            cube([maleMiddleWidth+1,femaleBaseLength,maleMiddleThick+2]);
-        }
-    }
-    translate([3,femaleBaseWidth-2+10,-3.8]) {
-        tokki();
-    }
-    translate([maleBaseWidth+1,femaleBaseWidth-2+10,-3.8]) {
-        tokki();
-    }
-    translate([3+3,femaleBaseWidth-2+10,femaleBaseThick+5.3]) {
-        rotate([0,180,0]) {
-            tokki();
-        }
-    }
-    translate([maleBaseWidth+1+3,femaleBaseWidth-2+10,femaleBaseThick+5.3]) {
-        rotate([0,180,0]) {
-            tokki();
-        }
-    }
-}
-
-module Adaptor() {
-    translate([(femaleBaseWidth-maleBaseWidth)/2,(femaleBaseLength-maleBaseWidth)/2,-(maleBaseThick+maleMiddleThick)]){
-        rotate([0,0,0]) {
-            HeadMale();
-        }
-    }
-    HeadFemale();
-}
-
-rotate([90,0,0]) {
-    Adaptor();
 }

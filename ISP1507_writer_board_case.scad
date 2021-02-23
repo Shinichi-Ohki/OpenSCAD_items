@@ -15,21 +15,21 @@ board_h = 49+C*2;
 module pin_place() {
   // 基板固定用ピン半径
   pin_dia = 1.3;
-  pin_hight = 4;
+  pin_height = 4;
+  pin_distance = 3; // 壁からピンの中心までの距離
   // 基板固定用ピン部品
   module board_pin() {
     cylinder(h = 2, r = 2.5);
     difference() {
-      cylinder(h = pin_hight, r = pin_dia);
-      cube([pin_dia,0.1,pin_hight]); // スリットを入れておく
-    }  
+      cylinder(h = pin_height, r = pin_dia);
+      cube([pin_dia,0.1,pin_height]); // スリットを入れておく
+    }
   }
   translate([0,0,T]) {
-    translate([3+C,3+C,0]) board_pin();
-    translate([3+C,board_h-3-C,0]) board_pin();
-    translate([board_w-3-C,3+C,0]) board_pin();
-    translate([board_w-3-C,board_h-3-C,0]) rotate([0,0,-180]) board_pin();
-  }  
+    translate([pin_distance+C,pin_distance+C,0]) board_pin();
+    translate([pin_distance+C,board_h-pin_distance-C,0]) board_pin();
+    translate([board_w-pin_distance-C,pin_distance+C,0]) board_pin();
+    translate([board_w-pin_distance-C,board_h-pin_distance-C,0]) rotate([0,0,-180]) board_pin();  }
 }
 
 // X方向壁
@@ -38,7 +38,7 @@ module X_wall(x,y,z) {
     difference() {
       cube([board_w+T*2,T,H]);
       translate([(board_w+T*2)/2-(board_w)/4,-0.002,T]) {
-        scale([1,1.004,1.001]) cube([(board_w)/2,T,H-T]);
+        scale([1,1.004,1.001]) cube([(board_w)/2,T,H-T]); // 少し膨らませてレンダリングをきれいにする
       }
     }
   }
@@ -50,7 +50,7 @@ module Y_wall(x,y,z) {
     difference() {
       cube([T,board_h+T*2,H]);
       translate([-0.002,(board_h+T*2)/2-(board_h)/4,T]) {
-        scale([1.004,1,1.001]) cube([T,board_h/2,H-T]);
+        scale([1.004,1,1.001]) cube([T,board_h/2,H-T]); // 少し膨らませてレンダリングをきれいにする
       }
     }
   }

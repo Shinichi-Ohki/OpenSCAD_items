@@ -38,5 +38,9 @@ My OpenSCAD items.
 - ![](greenhouse_arm_head/greenhouse_arm_head2.jpg)
 - ![](greenhouse_arm_head/greenhouse_arm_head3.jpg)
 
+## [Cable holder for Φ19mm metal rack](metal_rack_cable_clip)
+直径19mmのパイプを使ったメタルラックに付けられるケーブルホルダです。
+- ![](metal_rack_cable_clip/metal_rack_cable_clip.jpg)
+
 ## License
 All items are MIT License.
