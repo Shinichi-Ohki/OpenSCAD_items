@@ -2,6 +2,10 @@
 
 My OpenSCAD items.
 
+## [bit holder](bit_holder)
+- [サンフラッグ 99-B ウルトラミニ](https://www.yodobashi.com/product/100000001001997056/)用のホルダー。裏にドライバービットが収納できる(が、微妙な寸法なのでスカスカだったりするので要調整)
+- ![](bit_holder/bit1.png) ![](bit_holder/bit2.png)
+
 ## [headphone hook](headphone_hook/)
 - 16mmの角柱にひっかけるためのヘッドフォンフック
 - Rev.1はそのまま作っただけ
