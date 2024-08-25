@@ -2,6 +2,10 @@
 
 My OpenSCAD items.
 
+## [cap 5hole](cap_5hole)
+- ペットボトルのふたに穴を開けたのを避難リュックに入れとくといざという時に便利だというのを見たので穴位置のガイドとして作った
+- ![](cap_5hole/cap_5hole.png)
+
 ## [bit holder](bit_holder)
 - [サンフラッグ 99-B ウルトラミニ](https://www.yodobashi.com/product/100000001001997056/)用のホルダー。裏にドライバービットが収納できる(が、微妙な寸法なのでスカスカだったりするので要調整)
 - ![](bit_holder/bit1.png) ![](bit_holder/bit2.png)
@@ -43,7 +47,7 @@ My OpenSCAD items.
 - ![](greenhouse_arm_head/greenhouse_arm_head3.jpg)
 
 ## [Cable holder for Φ19mm metal rack](metal_rack_cable_clip)
-直径19mmのパイプを使ったメタルラックに付けられるケーブルホルダです。
+直径19mmのパイプを使ったメタルラックに付けられるケーブルホルダ。
 - ![](metal_rack_cable_clip/metal_rack_cable_clip.jpg)
 
 ## License
