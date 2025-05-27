@@ -2,6 +2,12 @@
 
 My OpenSCAD items.
 
+## [Hot Shoe Level Adapter](Hot_Shoe_Level_Adapter/)
+- 32mm径の水準器をカメラのホットシューに取り付けるためのアダプタ
+  - 32mm径の水準器 Aliexpress https://ja.aliexpress.com/item/1005006195179832.html
+  - Amazonでも買えると思います
+- カメラはCanon EOS 40Dで確認しています
+
 ## [cap 5hole](cap_5hole)
 - ペットボトルのふたに穴を開けたのを避難リュックに入れとくといざという時に便利だというのを見たので穴位置のガイドとして作った
 - ![](cap_5hole/cap_5hole.png)
