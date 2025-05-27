@@ -7,6 +7,9 @@ My OpenSCAD items.
   - 32mm径の水準器 Aliexpress https://ja.aliexpress.com/item/1005006195179832.html
   - Amazonでも買えると思います
 - カメラはCanon EOS 40Dで確認しています
+- ![](Hot_Shoe_Level_Adapter/2025-05-28_00-42-12_Cap_Circleと正方形の組み合わせ.png)
+- ![](Hot_Shoe_Level_Adapter/2025-05-28_00-42-02_Cap_3Dグラフ図.png)
+- ![](Hot_Shoe_Level_Adapter/IMG_4314.jpg)
 
 ## [cap 5hole](cap_5hole)
 - ペットボトルのふたに穴を開けたのを避難リュックに入れとくといざという時に便利だというのを見たので穴位置のガイドとして作った
